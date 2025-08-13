@@ -1,4 +1,4 @@
-# 🎧 Petal Music (Stable) :)
+# 🎧 Petal Music Estable
 
 **Petal Music** es un reproductor de música web minimalista que te permite disfrutar de tus archivos de audio locales directamente en tu navegador. Diseñado con un enfoque en la simplicidad y la experiencia de usuario, cuenta con una interfaz limpia, moderna e intuitiva, sin depender de frameworks ni librerías externas.
 
@@ -64,4 +64,5 @@ Este proyecto está bajo la licencia GPL-2.0 license.
 
 ## ❤️ ¡Disfruta de tu música sin salir del navegador!
 Desarrollado por JoseGhDark-commits (2025) 
+
 
