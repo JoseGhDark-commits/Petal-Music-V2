@@ -153,7 +153,7 @@ cd Petal-Music-V2
 
 ## 📝 Licencia
 
-Este proyecto está bajo la **GPL-2.0 License** - ve el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo la **Apache License 2.0** - ve el archivo [LICENSE](LICENSE) para más detalles.
 
 ## 🤝 Contribuciones
 
@@ -172,3 +172,4 @@ Las contribuciones son bienvenidas. Para cambios importantes:
 ---
 
 _Petal Music V2 - Donde la música se encuentra con el diseño premium_ 🌸
+
