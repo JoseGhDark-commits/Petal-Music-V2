@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Petal Music</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🌸 Petal Music</h1>
+      <p>Arrastra y suelta tus archivos de música favoritos</p>
+    </div>
+
+    <div class="main-content">
+      <div class="drop-zone" id="dropZone">
+        <div class="drop-zone-content">
+          <div class="upload-icon"></div>
+          <h2>Arrastra tus archivos aquí</h2>
+          <p>Soporta MP3, WAV, OGG y otros formatos de audio</p>
+          <button class="browse-btn" onclick="document.getElementById('fileInput').click()">
+            Seleccionar archivos
+          </button>
+          <input type="file" id="fileInput" class="file-input" multiple accept="audio/*">
+        </div>
+      </div>
+
+      <div class="playlist-container">
+        <div class="playlist-header">
+          <h3>Playlist</h3>
+          <span class="song-count" id="songCount">0 canciones</span>
+        </div>
+        <div class="playlist" id="playlist">
+          <div class="empty-playlist">
+            <p>No hay canciones en tu playlist</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="player-controls">
+      <div class="now-playing">
+        <div class="album-art" id="albumArt"><span class="music-note-icon"></span></div>
+        <div class="track-info">
+          <div class="track-title" id="currentSong">Ninguna canción seleccionada</div>
+          <div class="track-artist" id="currentArtist"></div>
+        </div>
+        <button class="metadata-btn" id="metadataBtn" onclick="player.showMetadata()"><span
+            class="info-icon"></span></button>
+      </div>
+
+      <div class="controls">
+        <button class="control-btn" id="prevBtn"><span class="prev-icon"></span></button>
+        <button class="control-btn play-pause" id="playPauseBtn"><span class="play-icon"></span></button>
+        <button class="control-btn" id="nextBtn"><span class="next-icon"></span></button>
+      </div>
+
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="time-display">
+          <span id="currentTime">0:00</span>
+          <span id="totalTime">0:00</span>
+        </div>
+      </div>
+
+      <div class="volume-control">
+        <span class="volume-icon" id="volumeIcon"><span class="volume-high-icon"></span></span>
+        <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="50">
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="metadataModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Información de la canción</h3>
+        <button class="close-btn" onclick="player.hideMetadata()"><span class="close-icon"></span></button>
+      </div>
+      <div class="metadata-grid" id="metadataGrid"></div>
+    </div>
+  </div>
+
+  <audio id="audioPlayer" preload="metadata"></audio>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
